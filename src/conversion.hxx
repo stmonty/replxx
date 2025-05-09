@@ -9,7 +9,7 @@
 #endif
 #endif
 
-#if ! ( defined( __cpp_lib_char8_t ) || ( defined( __clang_major__ ) && ( __clang_major__ >= 8 ) && ( __cplusplus > 201703L ) ) )
+#if defined(__cplusplus) && __cplusplus < 202002L
 namespace replxx {
 typedef unsigned char char8_t;
 }
